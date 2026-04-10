@@ -8,7 +8,9 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
-
+import os
+from dotenv import load_dotenv
+# load_dotenv()
 
 def cleanfxn(text):
     return text.encode("utf-8", "ignore").decode("utf-8", "ignore")
